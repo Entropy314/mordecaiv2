@@ -80,7 +80,7 @@ installed first).
 docker pull elasticsearch:5.5.2
 wget https://andrewhalterman.com/files/geonames_index.tar.gz --output-file=wget_log.txt
 tar -xzf geonames_index.tar.gz
-docker run -d -p 127.0.0.1:9200:9200 -v $(pwd)/geonames_index/:/usr/share/elasticsearch/data elasticsearch:5.5.2
+docker run -d -p 127.0.0.1:9100:9100 -v $(pwd)/geonames_index/:/usr/share/elasticsearch/data elasticsearch:5.5.2
 ```
 
 See the [es-geonames](https://github.com/openeventdata/es-geonames) for the code used
@@ -137,7 +137,7 @@ When instantiating the `Geoparser()` module, the following options can be change
     running. Defaults to `['localhost']`, which is where it runs if you're using
     the default Docker setup described above.
 - `es_port` : What port the Geonames Elasticsearch service is running on.
-    Defaults to `9200`, which is where the Docker setup has it
+    Defaults to `9100`, which is where the Docker setup has it
 - `es_ssl` : Whether Elasticsearch requires an SSL connection.
     Defaults to `False`.
 - `es_auth` : Optional HTTP auth parameters to use with ES.

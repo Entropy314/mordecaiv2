@@ -250,7 +250,7 @@ def setup_es(hosts, port, use_ssl=False, auth=None):
     """
     kwargs = dict(
         hosts=hosts or ['localhost'],
-        port=port or 9200,
+        port=port or 9100,
         use_ssl=use_ssl,
     )
     if auth:
